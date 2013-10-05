@@ -4,7 +4,7 @@
     <list default="true" id="2d49647f-f4c4-44a5-9455-2eea35dcf36b" name="Default" comment="" />
     <ignored path="Anonymule.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/GameView.java" changelist="2d49647f-f4c4-44a5-9455-2eea35dcf36b" time="1380936961963" ignored="false" />
+    <file path="/GameView.java" changelist="2d49647f-f4c4-44a5-9455-2eea35dcf36b" time="1380938524554" ignored="false" />
     <file path="/fragment.java" changelist="2d49647f-f4c4-44a5-9455-2eea35dcf36b" time="1380923463013" ignored="false" />
     <file path="/GameController.java" changelist="2d49647f-f4c4-44a5-9455-2eea35dcf36b" time="1380935859256" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,9 +70,12 @@
       <file leaf-file-name="GameView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="3" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.43850267">
+            <state line="50" column="15" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.3181818">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1104#1714#0" expanded="true" />
+                <element signature="e#2690#3254#0" expanded="true" />
+                <element signature="e#3243#3244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -438,9 +441,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="3" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.43850267">
+        <state line="50" column="15" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.3181818">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1104#1714#0" expanded="true" />
+            <element signature="e#2690#3254#0" expanded="true" />
+            <element signature="e#3243#3244#0" expanded="true" />
           </folding>
         </state>
       </provider>

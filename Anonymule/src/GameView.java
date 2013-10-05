@@ -13,29 +13,44 @@ import java.awt.event.ActionListener;
  */
 public class GameView {
     JPanel gameConfig = new JPanel();
-    JPanel playerConfig = new JPanel();
 
     public GameView(){
 
     }
 
-    private void createUIComponents() {
+    private void createGameConfigUIComponents() {
         String [] difficulty = {"Easy", "Hard"};
         String [] mapType = {"1", "2", "3"};
         String [] playerNumList = {"1","2","3","4"};
-        JComboBox gameDifficultyList = new JComboBox(difficulty);
-        JComboBox mapTypeList = new JComboBox(mapType);
-        JComboBox playerList = new JComboBox(playerNumList);
-        JLabel diffLabel = new JLabel("Difficulty:");
-        JLabel mapLable = new JLabel("Map Type:");
-        JLabel playerLabel = new JLabel("Number of Players:");
-        JButton continueButton = new JButton("Continue");
+        final JComboBox gameDifficultyList = new JComboBox(difficulty);
+        final JComboBox mapTypeList = new JComboBox(mapType);
+        final JComboBox playerList = new JComboBox(playerNumList);
+        final JLabel diffLabel = new JLabel("Difficulty:");
+        final JLabel mapLable = new JLabel("Map Type:");
+        final JLabel playerLabel = new JLabel("Number of Players:");
+        final JButton continueButton = new JButton("Continue");
         continueButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
+                gameConfig.remove(diffLabel);
+                gameConfig.remove(gameDifficultyList);
+                gameConfig.remove(mapLable);
+                gameConfig.remove(mapTypeList);
+                gameConfig.remove(playerLabel);
+                gameConfig.remove(playerList);
+                gameConfig.remove(continueButton);
+                gameConfig.revalidate();
+                gameConfig.repaint();
+
+                createPlayerConfigUIComponents();
+
+
+
+
             }
         });
+
 
         gameConfig.setLayout(new FlowLayout());
 
@@ -53,8 +68,60 @@ public class GameView {
 
     }
 
+    private void createPlayerConfigUIComponents() {
+        String [] race = {"race1", "race2"};
+        String [] color = {"red", "blue", "green", "yellow"};
+        final JComboBox playerRaceList = new JComboBox(race);
+        final JComboBox playerColorList = new JComboBox(color);
+        final JTextField playerNameField = new JTextField("Anonymule");
+
+        final JLabel raceLabel = new JLabel("Select Race:");
+        final JLabel colorLabel = new JLabel("Select Color:");
+        final JLabel nameLabel = new JLabel("PlayerName:");
+        final JButton continueButton = new JButton("Continue");
+        continueButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                gameConfig.remove(playerRaceList);
+                gameConfig.remove(playerColorList);
+                gameConfig.remove(playerNameField);
+                gameConfig.remove(raceLabel);
+                gameConfig.remove(colorLabel);
+                gameConfig.remove(nameLabel);
+                gameConfig.remove(continueButton);
+                gameConfig.revalidate();
+                gameConfig.repaint();
+
+
+
+
+            }
+        });
+
+        gameConfig.add(raceLabel);
+        gameConfig.add(playerRaceList);
+
+        gameConfig.add(colorLabel);
+        gameConfig.add(playerColorList);
+
+        gameConfig.add(nameLabel);
+        gameConfig.add(playerNameField);
+
+        gameConfig.add(continueButton);
+
+
+    }
+
+
+
+
+
+
+
+
     public JPanel getPanel(){
-        createUIComponents();
+        createGameConfigUIComponents();
         return gameConfig;
     }
 
